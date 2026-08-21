@@ -168,7 +168,7 @@ export default function StatsActivity() {
 
                                         <span
                                             data-stat-number
-                                            className="text-[clamp(5rem,8vw,8rem)] font-normal leading-[0.82] tracking-[-0.075em] text-[#3d3d3d]"
+                                            className="mt-8 text-[clamp(5rem,8vw,8rem)] font-normal leading-[0.82] tracking-[-0.075em] text-[#3d3d3d]"
                                         >
                                             {stat.number}
                                         </span>
@@ -211,7 +211,7 @@ export default function StatsActivity() {
 
                                         <span
                                             data-stat-number
-                                            className="text-[clamp(5rem,8vw,8rem)] font-normal leading-[0.82] tracking-[-0.075em] text-[#3d3d3d]"
+                                            className="mt-8 text-[clamp(5rem,8vw,8rem)] font-normal leading-[0.82] tracking-[-0.075em] text-[#3d3d3d]"
                                         >
                                             {stat.number}
                                         </span>
