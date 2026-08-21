@@ -11,19 +11,17 @@ export default function ConvoCTA() {
 
     const headingLine1Ref = useRef<HTMLDivElement>(null);
     const headingLine2Ref = useRef<HTMLDivElement>(null);
-    const headingLine3Ref = useRef<HTMLDivElement>(null);
 
     useLayoutEffect(() => {
         const section = sectionRef.current;
 
         const line1 = headingLine1Ref.current;
         const line2 = headingLine2Ref.current;
-        const line3 = headingLine3Ref.current;
 
-        if (!section || !line1 || !line2 || !line3) return;
+        if (!section || !line1 || !line2) return;
 
         const ctx = gsap.context(() => {
-            const headingLines = [line1, line2, line3];
+            const headingLines = [line1, line2];
 
             gsap.set(headingLines, {
                 rotateX: -90,
@@ -89,7 +87,7 @@ export default function ConvoCTA() {
                         {/* Get In Touch */}
                         <a
                             href="#"
-                            className="group/cta inline-flex mt-10 items-center"
+                            className="group/cta mt-10 inline-flex items-center"
                         >
                             <span className="relative z-10 origin-left rounded-full border-2 border-white px-8 py-1.5 text-[18px] font-medium transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/cta:-rotate-[10deg]">
                                 Get In Touch
