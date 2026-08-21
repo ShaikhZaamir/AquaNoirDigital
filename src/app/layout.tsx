@@ -4,6 +4,7 @@ import "./globals.css";
 import SmoothScroll from "./components/SmoothScroll";
 import BackToTop from "./components/BackToTop";
 import CustomScrollbar from "./components/CustomScrollbar";
+import Loader from "./components/Loader";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <SmoothScroll />
         <CustomScrollbar />
         <BackToTop />
+        <Loader />
 
         {children}
       </body>
