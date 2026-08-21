@@ -3,7 +3,7 @@
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Navbar from "../Navbar";
+import Navbar from "../HomeNav";
 
 gsap.registerPlugin(ScrollTrigger);
 
