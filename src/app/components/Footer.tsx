@@ -26,14 +26,14 @@ export default function Footer() {
 
                     <div className="group/footer flex flex-col gap-1 text-[20px] leading-[1.3]">
                         <a
-                            href="#"
+                            href="/about"
                             className="text-white transition-opacity duration-300 group-hover/footer:opacity-30 hover:opacity-100!"
                         >
                             About Us
                         </a>
 
                         <a
-                            href="#"
+                            href="/services"
                             className="text-white transition-opacity duration-300 group-hover/footer:opacity-30 hover:opacity-100!"
                         >
                             Services
@@ -54,7 +54,7 @@ export default function Footer() {
                         </a>
 
                         <a
-                            href="#"
+                            href="/contact"
                             className="text-white transition-opacity duration-300 group-hover/footer:opacity-30 hover:opacity-100!"
                         >
                             Contact Us
