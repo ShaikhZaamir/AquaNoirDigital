@@ -5,35 +5,35 @@ import gsap from "gsap";
 
 const services = [
     {
-        number: "(001)",
+        number: "(01)",
         title: "Digital Growth Strategy",
         description:
             "We analyse your current digital ecosystem, identify opportunities for improvement, and build a structured growth roadmap aligned with your business objectives",
         image: "/AND0006-Digital-growth-strategy-270-x-210.jpg",
     },
     {
-        number: "(002)",
+        number: "(02)",
         title: "Demand Generation & Performance Marketing",
         description:
             "We design acquisition systems that attract right audience and convert attention into meaningful enquiries and sales opportunities",
         image: "/AND0006-Demand-generation-performance-marketing-270-x-210.jpg",
     },
     {
-        number: "(003)",
+        number: "(03)",
         title: "Search & Organic Visibility",
         description:
             "Customers search before they decide. We help your brand appear in those crucial moments through strong search strategy, technical SEO and high-value content.",
         image: "/AND0006-Search-and-organic-visibilty-270-x-210.jpg",
     },
     {
-        number: "(004)",
+        number: "(04)",
         title: "Brand & Content Ecosystems",
         description:
             "Strong brands grow through consistent communication. We build content strategies and social media ecosystems that strengthen your brand authority and deepen customer engagement",
         image: "/AND0006-Brand-and-content-ecosystems-270-x-210.jpg",
     },
     {
-        number: "(005)",
+        number: "(05)",
         title: "Digital Experience Platforms",
         description:
             "Your website is one of your most important growth assets. We design digital platforms that are not only visually compelling but also structured to convert visitors into customers",
@@ -41,7 +41,7 @@ const services = [
     },
 ];
 
-export default function Services() {
+export default function Capabilities() {
     const serviceRefs = useRef<HTMLDivElement[]>([]);
 
     const handleMouseEnter = (index: number) => {
@@ -148,14 +148,14 @@ export default function Services() {
                 {/* Left Label */}
                 <div className="w-[38%] shrink-0">
                     <h2 className="text-[30px] font-normal leading-none tracking-[-0.045em]">
-                        OUR SERVICES
+                        CAPABILITIES
                     </h2>
                 </div>
 
                 {/* Right Content */}
                 <div className="w-[62%]">
                     <h3 className="text-[80px] font-normal leading-[0.9] tracking-[-0.085em]">
-                        Our services that power your business growth
+                        Building the Systems That Power Digital Growth
                     </h3>
 
                     {/* Services List */}
@@ -174,7 +174,7 @@ export default function Services() {
                                 onMouseLeave={() =>
                                     handleMouseLeave(index)
                                 }
-                                className="flex h-[100px] min-h-[100px] w-full items-start overflow-hidden border-t border-white/10 pt-1"
+                                className="flex h-[150px] min-h-[110px] w-full items-start overflow-hidden border-t border-white/10 pt-1"
                             >
                                 {/* Number */}
                                 <div className="w-[18%] shrink-0">
@@ -191,7 +191,7 @@ export default function Services() {
 
                                     <p
                                         data-service-description
-                                        className="mt-3 max-w-100 translate-y-5 text-[20px] leading-[1.2] tracking-[-0.025em] opacity-0"
+                                        className="mt-3 max-w-100 translate-y-5 text-[20px] leading-[1.2] tracking-[-0.025em] text-[#999999] opacity-0"
                                     >
                                         {service.description}
                                     </p>
@@ -203,7 +203,7 @@ export default function Services() {
                                         data-service-image
                                         src={service.image}
                                         alt=""
-                                        className="pointer-events-none h-[90px] w-full rounded-[16px] object-cover"
+                                        className="pointer-events-none h-[100px] w-full rounded-[16px] object-cover"
                                     />
                                 </div>
                             </div>
