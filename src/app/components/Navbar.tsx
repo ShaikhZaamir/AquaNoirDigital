@@ -10,9 +10,9 @@ const navItems = [
     { label: "Contact", href: "/contact" },
 ];
 
-export default function HomeNav() {
+export default function Navbar() {
     return (
-        <header className="grid grid-cols-2 items-start">
+        <header className="grid grid-cols-2 p-4 items-start">
             {/* Logo */}
             <div className="flex items-start pt-3">
                 <img

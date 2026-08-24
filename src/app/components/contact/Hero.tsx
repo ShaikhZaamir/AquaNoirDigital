@@ -54,9 +54,9 @@ export default function Hero() {
             <div className="flex w-full flex-col justify-start pb-20 pt-10">
                 <h1
                     ref={headingRef}
-                    className={`${anton.className} text-center text-[325px] font-normal leading-[0.78] tracking-[-0.035em] will-change-transform`}
+                    className={`${anton.className} text-center text-[325px] leading-[0.78] tracking-[-0.035em] will-change-transform`}
                 >
-                    SINCE 2012
+                    CONTACT
                 </h1>
             </div>
         </section>

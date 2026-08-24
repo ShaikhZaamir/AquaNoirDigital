@@ -20,7 +20,7 @@ import gsap from "gsap";
  * doesn't flash instantly on fast loads.
  */
 
-const MIN_DISPLAY_MS = 0;
+const MIN_DISPLAY_MS = 10;
 
 function waitForReady() {
     const minDelay = new Promise((resolve) => setTimeout(resolve, MIN_DISPLAY_MS));

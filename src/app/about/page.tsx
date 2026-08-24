@@ -15,7 +15,7 @@ import Navbar from "../components/Navbar";
 export default function AboutPage() {
     return (<>
         <section
-            className="min-h-screen bg-[#111111] py-5 text-white"
+            className="min-h-screen bg-[#111111] text-white"
         >
             <Navbar />
             <Hero />

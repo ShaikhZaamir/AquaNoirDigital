@@ -12,7 +12,7 @@ const navItems = [
 
 export default function HomeNav() {
     return (
-        <header className="grid grid-cols-3 items-start">
+        <header className="grid grid-cols-3 p-4 items-start">
             {/* Logo */}
             <div className="flex items-start pt-3">
                 <img
@@ -24,7 +24,7 @@ export default function HomeNav() {
 
             {/* Nav Text */}
             <div className="flex justify-center pt-2">
-                <p className="w-full text-center text-base leading-[1.15]">
+                <p className="w-full text-center text-[18apx] leading-[1.15]">
                     Strategy-Led Digital Growth Partner
                     <br />
                     Part of the AURAA Ecosystem
