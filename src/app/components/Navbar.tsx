@@ -12,7 +12,7 @@ const navItems = [
 
 export default function HomeNav() {
     return (
-        <header className="grid grid-cols-3 items-start">
+        <header className="grid grid-cols-2 items-start">
             {/* Logo */}
             <div className="flex items-start pt-3">
                 <img
@@ -20,15 +20,6 @@ export default function HomeNav() {
                     alt="Aquanoir Logo"
                     className="w-[120px] object-contain sm:w-[135px]"
                 />
-            </div>
-
-            {/* Nav Text */}
-            <div className="flex justify-center pt-2">
-                <p className="w-full text-center text-base leading-[1.15]">
-                    Strategy-Led Digital Growth Partner
-                    <br />
-                    Part of the AURAA Ecosystem
-                </p>
             </div>
 
             {/* Navigation */}

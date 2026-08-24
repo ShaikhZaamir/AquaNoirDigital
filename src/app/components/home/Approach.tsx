@@ -42,6 +42,9 @@ export default function Approach() {
     const headingLine4Ref = useRef<HTMLDivElement>(null);
     const headingLine5Ref = useRef<HTMLDivElement>(null);
     const headingLine6Ref = useRef<HTMLDivElement>(null);
+    const headingLine7Ref = useRef<HTMLDivElement>(null);
+    const headingLine8Ref = useRef<HTMLDivElement>(null);
+    const headingLine9Ref = useRef<HTMLDivElement>(null);
 
     const cardRefs = useRef<HTMLElement[]>([]);
 
@@ -54,6 +57,9 @@ export default function Approach() {
         const line4 = headingLine4Ref.current;
         const line5 = headingLine5Ref.current;
         const line6 = headingLine6Ref.current;
+        const line7 = headingLine7Ref.current;
+        const line8 = headingLine8Ref.current;
+        const line9 = headingLine9Ref.current;
 
         if (
             !section ||
@@ -62,7 +68,10 @@ export default function Approach() {
             !line3 ||
             !line4 ||
             !line5 ||
-            !line6
+            !line6 ||
+            !line7 ||
+            !line8 ||
+            !line9
         ) {
             return;
         }
@@ -79,6 +88,9 @@ export default function Approach() {
                 line4,
                 line5,
                 line6,
+                line7,
+                line8,
+                line9,
             ];
 
             gsap.set(headingLines, {
@@ -140,16 +152,14 @@ export default function Approach() {
     return (
         <section
             ref={sectionRef}
-            className="bg-[#111111] px-4 py-24 text-white"
+            className="bg-[#111111] px-4 text-white"
         >
             {/* Top Container */}
             <div className="flex w-full items-end">
                 {/* Left — 35% */}
                 <div className="w-[35%]">
-                    <p className="text-[30px] leading-[1.15] tracking-[-0.04em]">
-                        APPROACH, EXPERTISE
-                        <br />
-                        AND VALUES
+                    <p className="text-[30px] font-medium leading-[1.15] tracking-[-0.04em]">
+                        OUR APPROACH
                     </p>
                 </div>
 
@@ -161,7 +171,7 @@ export default function Approach() {
                             ref={headingLine1Ref}
                             className="origin-top text-[80px] font-medium leading-[0.88] tracking-[-0.065em]"
                         >
-                            We build connected digital
+                            We build connected
                         </div>
 
                         {/* Line 2 */}
@@ -169,7 +179,7 @@ export default function Approach() {
                             ref={headingLine2Ref}
                             className="origin-top text-[80px] font-medium leading-[0.88] tracking-[-0.065em]"
                         >
-                            growth systems that bring
+                            digital growth
                         </div>
 
                         {/* Line 3 */}
@@ -177,7 +187,7 @@ export default function Approach() {
                             ref={headingLine3Ref}
                             className="origin-top text-[80px] font-medium leading-[0.88] tracking-[-0.065em]"
                         >
-                            together strategy, brand
+                            systems that bring
                         </div>
 
                         {/* Line 4 */}
@@ -185,7 +195,7 @@ export default function Approach() {
                             ref={headingLine4Ref}
                             className="origin-top text-[80px] font-medium leading-[0.88] tracking-[-0.065em]"
                         >
-                            communication,
+                            together strategy,
                         </div>
 
                         {/* Line 5 */}
@@ -193,7 +203,7 @@ export default function Approach() {
                             ref={headingLine5Ref}
                             className="origin-top text-[80px] font-medium leading-[0.88] tracking-[-0.065em]"
                         >
-                            performance marketing, and
+                            brand
                         </div>
 
                         {/* Line 6 */}
@@ -201,7 +211,31 @@ export default function Approach() {
                             ref={headingLine6Ref}
                             className="origin-top text-[80px] font-medium leading-[0.88] tracking-[-0.065em]"
                         >
-                            digital infrastructure.
+                            communication,
+                        </div>
+
+                        {/* Line 7 */}
+                        <div
+                            ref={headingLine7Ref}
+                            className="origin-top text-[80px] font-medium leading-[0.88] tracking-[-0.065em]"
+                        >
+                            performance
+                        </div>
+
+                        {/* Line 8 */}
+                        <div
+                            ref={headingLine8Ref}
+                            className="origin-top text-[80px] font-medium leading-[0.88] tracking-[-0.065em]"
+                        >
+                            marketing, and digital
+                        </div>
+
+                        {/* Line 9 */}
+                        <div
+                            ref={headingLine9Ref}
+                            className="origin-top text-[80px] font-medium leading-[0.88] tracking-[-0.065em]"
+                        >
+                            infrastructure.
                         </div>
                     </div>
                 </div>

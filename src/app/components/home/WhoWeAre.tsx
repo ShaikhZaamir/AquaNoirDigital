@@ -22,14 +22,14 @@ export default function WhoWeAre() {
 
                 {/* Right Content */}
                 <div className="flex w-1/2 shrink-0 flex-col">
-                    <h2 className="max-w-[850px] text-[30px] font-medium leading-[1.05] tracking-[-0.025em]">
+                    <h2 className="max-w-[850px] text-[30px] font-medium leading-[1.05]">
                         PART OF THE AURAA ECOSYSTEM - STRATEGY,
                         <br />
                         BRAND, AND DIGITAL UNDER ONE ROOF.
                     </h2>
 
                     <div className="mt-5 max-w-[900px]">
-                        <p className="text-[20px] font-normal leading-[1.05] tracking-[-0.025em]">
+                        <p className="text-[20px] font-normal leading-[1.30]">
                             Aqua Noir Digital is the digital growth partner within AURAA
                             – a brand strategy and communications group that has
                             partnered with businesses including Meril Life, Axis Bank,
@@ -37,7 +37,7 @@ export default function WhoWeAre() {
                             Britannia, CitiusTech, and Nuvama.
                         </p>
 
-                        <p className="mt-5 text-[20px] font-normal leading-[1.05] tracking-[-0.025em]">
+                        <p className="mt-5 text-[20px] font-normal leading-[1.30]">
                             We bring that strategic depth – 15 years of brand and
                             business thinking across sectors into every digital mandate.
                             AURAA leads on brand strategy, positioning, and
@@ -46,7 +46,7 @@ export default function WhoWeAre() {
                             integrated strategy-to-digital partner you need.
                         </p>
 
-                        <p className="mt-5 text-[20px] font-normal leading-[1.05] tracking-[-0.025em]">
+                        <p className="mt-5 text-[20px] font-normal leading-[1.30]">
                             We don’t work with everyone. We work with growth-stage
                             businesses who are ready to invest in a partner, not a
                             vendor and who measure success by revenue, not reports.

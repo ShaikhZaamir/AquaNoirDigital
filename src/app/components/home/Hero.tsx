@@ -267,23 +267,23 @@ export default function Hero() {
 
                                 <span className="relative z-0 -ml-[2px] flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-white transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/cta:-translate-x-[7px]">
                                     <svg
-                                        width="20"
-                                        height="20"
-                                        viewBox="0 0 20 20"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 22 22"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
                                         aria-hidden="true"
                                     >
                                         <path
-                                            d="M4 16L16 4"
+                                            d="M6 16L16 6"
                                             stroke="currentColor"
-                                            strokeWidth="1.8"
+                                            strokeWidth="3"
                                             strokeLinecap="round"
                                         />
                                         <path
-                                            d="M9 4H16V11"
+                                            d="M9.5 6H16V12.5"
                                             stroke="currentColor"
-                                            strokeWidth="1.8"
+                                            strokeWidth="3"
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
                                         />
@@ -302,23 +302,23 @@ export default function Hero() {
 
                                 <span className="relative z-0 -ml-[2px] flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-white transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/cta:-translate-x-[7px]">
                                     <svg
-                                        width="20"
-                                        height="20"
-                                        viewBox="0 0 20 20"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 22 22"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
                                         aria-hidden="true"
                                     >
                                         <path
-                                            d="M4 16L16 4"
+                                            d="M6 16L16 6"
                                             stroke="currentColor"
-                                            strokeWidth="1.8"
+                                            strokeWidth="3"
                                             strokeLinecap="round"
                                         />
                                         <path
-                                            d="M9 4H16V11"
+                                            d="M9.5 6H16V12.5"
                                             stroke="currentColor"
-                                            strokeWidth="1.8"
+                                            strokeWidth="3"
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
                                         />
