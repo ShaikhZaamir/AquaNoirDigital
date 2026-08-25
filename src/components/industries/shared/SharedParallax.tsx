@@ -6,7 +6,19 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Parallax() {
+type SharedParallaxProps = {
+    descriptionOne: string;
+    descriptionTwo: string;
+    smallImage: string;
+    largeImage: string;
+};
+
+export default function SharedParallax({
+    descriptionOne,
+    descriptionTwo,
+    smallImage,
+    largeImage,
+}: SharedParallaxProps) {
     const sectionRef = useRef<HTMLElement>(null);
     const laptopImageRef = useRef<HTMLImageElement>(null);
     const meetingImageRef = useRef<HTMLImageElement>(null);
@@ -52,14 +64,11 @@ export default function Parallax() {
             {/* Description */}
             <div className="absolute left-10 top-[55%] z-20 w-[500px]">
                 <p className="text-[30px] font-normal leading-[1.15] tracking-[-0.055em]">
-                    Healthcare decisions are deeply personal. Patients often
-                    search online for symptoms, treatments, hospitals, and
-                    specialists before making an appointment.
+                    {descriptionOne}
                 </p>
 
                 <p className="mt-10 text-[30px] font-normal leading-[1.15] tracking-[-0.055em]">
-                    We help healthcare providers become discoverable, credible
-                    and accessible in the digital world.
+                    {descriptionTwo}
                 </p>
             </div>
 
@@ -67,7 +76,7 @@ export default function Parallax() {
             <div className="absolute left-[31.5%] top-[8%] z-10 h-[300px] w-[235px] overflow-hidden">
                 <img
                     ref={meetingImageRef}
-                    src="/ax-h2-about-02.png"
+                    src={smallImage}
                     alt=""
                     className="absolute left-0 top-0 h-[116%] w-full max-w-none object-cover"
                 />
@@ -77,7 +86,7 @@ export default function Parallax() {
             <div className="absolute left-[54.5%] top-0 h-full w-[45.5%] overflow-hidden">
                 <img
                     ref={laptopImageRef}
-                    src="/ax-h2-about-01.png"
+                    src={largeImage}
                     alt=""
                     className="absolute left-0 top-0 h-[110vh] w-full max-w-none object-cover"
                 />

@@ -57,7 +57,7 @@ export default function ConvoCTA() {
     return (
         <section
             ref={sectionRef}
-            className="w-full bg-[#111111] px-5 text-white"
+            className="w-full bg-[#111111] px-5 py-6 text-white"
         >
             <div className="flex min-h-[285px] w-full items-start">
                 {/* Left Empty Half */}
@@ -74,14 +74,14 @@ export default function ConvoCTA() {
                             ref={headingLine1Ref}
                             className="origin-top text-[80px] font-medium leading-[0.88] tracking-[-0.065em]"
                         >
-                            Let&apos;s Start With
+                            Let&apos;s Start With a
                         </div>
 
                         <div
                             ref={headingLine2Ref}
                             className="origin-top text-[80px] font-medium leading-[0.88] tracking-[-0.065em]"
                         >
-                            a Conversation
+                            Conversation
                         </div>
 
                         {/* Get In Touch */}

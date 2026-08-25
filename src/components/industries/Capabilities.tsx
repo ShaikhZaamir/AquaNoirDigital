@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 const INITIAL_IMAGE_SIZE = 35;
@@ -9,30 +10,37 @@ const POPUP_DURATION = "1.2s";
 const capabilities = [
     {
         title: "Real Estate",
+        slug: "real-estate",
         image: "/Reak-Estate.png",
     },
     {
         title: "Financial Services & BFSI",
+        slug: "financial-services-bfsi",
         image: "/Financial-.png",
     },
     {
         title: "Healthcare",
+        slug: "healthcare",
         image: "/Healthcare.png",
     },
     {
         title: "Technology & SaaS",
+        slug: "technology-saas",
         image: "/Technology-.png",
     },
     {
         title: "Consumer & D2C Brands",
+        slug: "consumer-d2c-brands",
         image: "/Consumer-.png",
     },
     {
         title: "Heavy Engineering",
+        slug: "heavy-engineering",
         image: "/Engineering.png",
     },
     {
         title: "Education & Consultant",
+        slug: "education-consultant",
         image: "/Education.png",
     },
 ];
@@ -43,7 +51,7 @@ export default function Capabilities() {
 
     const handleMouseEnter = (
         index: number,
-        event: React.MouseEvent<HTMLDivElement>
+        event: React.MouseEvent<HTMLAnchorElement>
     ) => {
         const rect = event.currentTarget.getBoundingClientRect();
 
@@ -64,8 +72,9 @@ export default function Capabilities() {
             <div className="flex flex-1 items-center">
                 <div className="flex w-full flex-col">
                     {capabilities.map((capability, index) => (
-                        <div
-                            key={capability.title}
+                        <Link
+                            key={capability.slug}
+                            href={`/industries/${capability.slug}`}
                             onMouseEnter={(event) =>
                                 handleMouseEnter(index, event)
                             }
@@ -75,7 +84,7 @@ export default function Capabilities() {
                             <h2 className="text-[58px] font-normal leading-[1.22] tracking-[-0.055em]">
                                 {capability.title}
                             </h2>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>
@@ -107,19 +116,19 @@ export default function Capabilities() {
             )}
 
             <style jsx>{`
-            @keyframes popup {
-                0% {
-                    opacity: 0;
-                    transform: translateY(-50%)
-                        scale(var(--initial-scale));
-                }
+                @keyframes popup {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(-50%)
+                            scale(var(--initial-scale));
+                    }
 
-                100% {
-                    opacity: 1;
-                    transform: translateY(-50%) scale(1);
+                    100% {
+                        opacity: 1;
+                        transform: translateY(-50%) scale(1);
+                    }
                 }
-            }
-        `}</style>
+            `}</style>
         </section>
     );
 }
