@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
     return (
@@ -9,14 +10,16 @@ export default function Footer() {
             <div className="flex min-h-[360px] w-full border-t border-white/10 items-start px-5 pb-24 pt-24 sm:px-6 lg:px-8">
                 {/* Logo */}
                 <div className="flex w-[40%] shrink-0 items-center justify-center">
-                    <Image
-                        src="/logo_Light.png"
-                        alt="Aqua Noir Digital"
-                        width={256}
-                        height={82}
-                        priority
-                        className="h-auto w-[256px]"
-                    />
+                    <Link href="/" aria-label="Go to home page">
+                        <Image
+                            src="/logo_Light.png"
+                            alt="Aqua Noir Digital"
+                            width={256}
+                            height={82}
+                            priority
+                            className="h-auto w-[256px]"
+                        />
+                    </Link>
                 </div>
 
                 {/* Company */}

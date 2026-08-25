@@ -15,11 +15,13 @@ export default function Navbar() {
         <header className="grid grid-cols-2 p-4 items-start">
             {/* Logo */}
             <div className="flex items-start pt-3">
-                <img
-                    src="/logo_Light.png"
-                    alt="Aquanoir Logo"
-                    className="h-auto w-[120px] object-contain sm:w-[135px]"
-                />
+                <Link href="/" aria-label="Go to home page">
+                    <img
+                        src="/logo_Light.png"
+                        alt="Aquanoir Logo"
+                        className="h-auto w-[120px] object-contain sm:w-[135px]"
+                    />
+                </Link>
             </div>
 
             {/* Navigation */}
