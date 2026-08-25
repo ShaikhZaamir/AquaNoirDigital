@@ -12,7 +12,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Aqua Noir Digital",
+  title: "[Local]",
+  // title: "Aqua Noir Digital",
   description: "Wordpress Redox Theme in Next.js",
 };
 
