@@ -1,15 +1,16 @@
-import AboutIntro from "../components/about/AboutIntro";
-import Hero from "../components/about/Hero";
-import HeroIntro from "../components/about/HeroIntro";
-import StatsStrip from "../components/about/StatsStrip";
-import WorkCTA from "../components/about/WorkCTA";
-import YoutubeVideo from "../components/about/YoutubeVideo";
-import Footer from "../components/Footer";
-import Approach from "../components/home/Approach";
-import Clients from "../components/home/Clients";
-import Partners from "../components/home/Partners";
-import WhoWeAre from "../components/home/WhoWeAre";
-import Navbar from "../components/Navbar";
+import AboutIntro from "@/components/about/AboutIntro";
+import HeroIntro from "@/components/about/HeroIntro";
+import StatsStrip from "@/components/about/StatsStrip";
+import WorkCTA from "@/components/about/WorkCTA";
+import YoutubeVideo from "@/components/about/YoutubeVideo";
+import Footer from "@/components/Footer";
+import Approach from "@/components/home/Approach";
+import Clients from "@/components/home/Clients";
+import Hero from "@/components/about/Hero";
+import Partners from "@/components/home/Partners";
+import WhoWeAre from "@/components/home/WhoWeAre";
+import Navbar from "@/components/Navbar";
+
 
 
 export default function AboutPage() {

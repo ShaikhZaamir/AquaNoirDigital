@@ -187,12 +187,12 @@ export default function Hero() {
         <>
             <section
                 ref={heroRef}
-                className="min-h-screen bg-[#111111] px-3.5 text-white"
+                className="min-h-screen bg-[#111111] text-white"
             >
                 <Navbar />
 
                 {/* Main Hero Heading */}
-                <div className="mt-2">
+                <div className="mt-2 px-3.5">
                     <h1
                         ref={heroHeadingRef}
                         className="max-w-[100%] text-[90px] font-medium leading-[0.8] tracking-[-0.055em]"

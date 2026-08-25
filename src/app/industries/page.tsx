@@ -1,11 +1,12 @@
-import Hero from "../components/industries/Hero";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import Clients from "../components/home/Clients";
-import Approach from "../components/home/Approach";
-import ConvoCTA from "../components/home/ConvoCTA";
-import Capabilities from "../components/industries/Capabilities";
-import ParallaxImage from "../components/industries/ParallaxImage";
+import Hero from "@/components/industries/Hero";
+import Footer from "@/components/Footer";
+import Approach from "@/components/home/Approach";
+import Clients from "@/components/home/Clients";
+import ConvoCTA from "@/components/home/ConvoCTA";
+import Capabilities from "@/components/industries/Capabilities";
+import ParallaxImage from "@/components/industries/ParallaxImage";
+import Navbar from "@/components/Navbar";
+
 
 
 export default function AboutPage() {

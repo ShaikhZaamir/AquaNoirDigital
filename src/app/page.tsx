@@ -1,13 +1,14 @@
-import Footer from "./components/Footer";
-import Approach from "./components/home/Approach";
-import Awards from "./components/home/Awards";
-import Clients from "./components/home/Clients";
-import ConvoCTA from "./components/home/ConvoCTA";
-import Hero from "./components/home/Hero";
-import Partners from "./components/home/Partners";
-import Services from "./components/home/Services";
-import StatsActivity from "./components/home/StatsActivity";
-import WhoWeAre from "./components/home/WhoWeAre";
+import Hero from "@/components/home/Hero";
+import Footer from "@/components/Footer";
+import Approach from "@/components/home/Approach";
+import Awards from "@/components/home/Awards";
+import Clients from "@/components/home/Clients";
+import ConvoCTA from "@/components/home/ConvoCTA";
+import Partners from "@/components/home/Partners";
+import Services from "@/components/home/Services";
+import StatsActivity from "@/components/home/StatsActivity";
+import WhoWeAre from "@/components/home/WhoWeAre";
+
 
 export default function Home() {
   return (

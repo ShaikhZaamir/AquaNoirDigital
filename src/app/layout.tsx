@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
-import SmoothScroll from "./components/SmoothScroll";
-import BackToTop from "./components/BackToTop";
-import CustomScrollbar from "./components/CustomScrollbar";
-import Loader from "./components/Loader";
+import BackToTop from "@/components/BackToTop";
+import CustomScrollbar from "@/components/CustomScrollbar";
+import Loader from "@/components/Loader";
+import SmoothScroll from "@/components/SmoothScroll";
+  
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
