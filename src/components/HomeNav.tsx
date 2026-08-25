@@ -16,9 +16,9 @@ export default function HomeNav() {
             {/* Logo */}
             <div className="flex items-start pt-3">
                 <img
-                    src="\logo_Light.png"
+                    src="/logo_Light.png"
                     alt="Aquanoir Logo"
-                    className="w-[120px] h-auto object-contain sm:w-[135px]"
+                    className="h-auto w-[120px] object-contain sm:w-[135px]"
                 />
             </div>
 

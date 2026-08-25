@@ -14,6 +14,7 @@ export default function Footer() {
                         alt="Aqua Noir Digital"
                         width={256}
                         height={82}
+                        priority
                         className="h-auto w-[256px]"
                     />
                 </div>

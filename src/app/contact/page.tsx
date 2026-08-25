@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/home/Hero";
 import Navbar from "@/components/Navbar";
 
-export default function AboutPage() {
+export default function ContactPage() {
     return (<>
         <section
             className="min-h-screen bg-[#111111] text-white"

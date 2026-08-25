@@ -8,7 +8,7 @@ import Navbar from "@/components/Navbar";
 
 
 
-export default function AboutPage() {
+export default function ServicesPage() {
     return (<>
         <section
             className="min-h-screen bg-[#111111] text-white"
