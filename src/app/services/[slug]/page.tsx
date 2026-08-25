@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
 import { services } from "@/app/data/services";
-import ServiceHero from "@/components/services/service-page/ServiceHero";
-import StrategyOverview from "@/components/services/service-page/StrategyOverview";
-import WhatsIncluded from "@/components/services/service-page/WhatsIncluded";
-import WhoThisIsFor from "@/components/services/service-page/WhoThisIsFor";
+import ServiceHero from "@/components/services/shared/ServiceHero";
+import StrategyOverview from "@/components/services/shared/StrategyOverview";
+import WhatsIncluded from "@/components/services/shared/WhatsIncluded";
+import WhoThisIsFor from "@/components/services/shared/WhoThisIsFor";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 

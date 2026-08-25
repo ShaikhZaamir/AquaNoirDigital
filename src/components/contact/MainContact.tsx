@@ -27,10 +27,6 @@ export default function MainContact() {
         }
 
         const ctx = gsap.context(() => {
-            /* =========================================
-               TOP LABEL
-            ========================================= */
-
             gsap.fromTo(
                 label,
                 {
@@ -49,10 +45,6 @@ export default function MainContact() {
                     },
                 }
             );
-
-            /* =========================================
-               TOP HEADING
-            ========================================= */
 
             gsap.fromTo(
                 heading,
@@ -73,10 +65,6 @@ export default function MainContact() {
                 }
             );
 
-            /* =========================================
-               LEFT CONTACT CONTENT
-            ========================================= */
-
             gsap.fromTo(
                 leftContent,
                 {
@@ -95,10 +83,6 @@ export default function MainContact() {
                     },
                 }
             );
-
-            /* =========================================
-               CONTACT FORM
-            ========================================= */
 
             gsap.fromTo(
                 form,
@@ -173,16 +157,20 @@ export default function MainContact() {
                     <div className="mt-4 flex flex-col items-start">
                         <a
                             href="mailto:info@aquanoirdigital.com"
-                            className="text-[30px] font-normal leading-[1.35] tracking-[-0.045em] underline underline-offset-8"
+                            className="group/contact-link relative text-[30px] font-normal leading-[1.35] tracking-[-0.045em]"
                         >
                             info@aquanoirdigital.com
+
+                            <span className="absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-100 bg-white transition-transform duration-500 ease-in-out group-hover/contact-link:scale-x-0" />
                         </a>
 
                         <a
                             href="tel:+917030091866"
-                            className="mt-2 text-[30px] font-normal leading-[1.35] tracking-[-0.045em] underline underline-offset-8"
+                            className="group/contact-link relative mt-2 text-[30px] font-normal leading-[1.35] tracking-[-0.045em]"
                         >
                             +91 70300 91866
+
+                            <span className="absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-100 bg-white transition-transform duration-500 ease-in-out group-hover/contact-link:scale-x-0" />
                         </a>
                     </div>
 
@@ -195,23 +183,53 @@ export default function MainContact() {
                         <div className="mt-6 flex flex-col items-start">
                             <a
                                 href="#"
-                                className="text-[30px] font-normal leading-[1.3] tracking-[-0.045em] underline underline-offset-8"
-                            >
-                                LinkedIn
-                            </a>
-
-                            <a
-                                href="#"
-                                className="text-[30px] font-normal leading-[1.3] tracking-[-0.045em] underline underline-offset-8"
+                                className="group/contact-link relative text-[30px] font-normal leading-[1.3] tracking-[-0.045em]"
                             >
                                 Facebook
+
+                                <span className="absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-100 bg-white transition-transform duration-500 ease-in-out group-hover/contact-link:scale-x-0" />
                             </a>
 
                             <a
                                 href="#"
-                                className="text-[30px] font-normal leading-[1.3] tracking-[-0.045em] underline underline-offset-8"
+                                className="group/contact-link relative text-[30px] font-normal leading-[1.3] tracking-[-0.045em]"
+                            >
+                                Twitter
+
+                                <span className="absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-100 bg-white transition-transform duration-500 ease-in-out group-hover/contact-link:scale-x-0" />
+                            </a>
+
+                            <a
+                                href="#"
+                                className="group/contact-link relative text-[30px] font-normal leading-[1.3] tracking-[-0.045em]"
+                            >
+                                LinkedIn
+
+                                <span className="absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-100 bg-white transition-transform duration-500 ease-in-out group-hover/contact-link:scale-x-0" />
+                            </a>
+                            <a
+                                href="#"
+                                className="group/contact-link relative text-[30px] font-normal leading-[1.3] tracking-[-0.045em]"
                             >
                                 Instagram
+
+                                <span className="absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-100 bg-white transition-transform duration-500 ease-in-out group-hover/contact-link:scale-x-0" />
+                            </a>
+                            <a
+                                href="#"
+                                className="group/contact-link relative text-[30px] font-normal leading-[1.3] tracking-[-0.045em]"
+                            >
+                                Dribbble
+
+                                <span className="absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-100 bg-white transition-transform duration-500 ease-in-out group-hover/contact-link:scale-x-0" />
+                            </a>
+                            <a
+                                href="#"
+                                className="group/contact-link relative text-[30px] font-normal leading-[1.3] tracking-[-0.045em]"
+                            >
+                                Behance
+
+                                <span className="absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-100 bg-white transition-transform duration-500 ease-in-out group-hover/contact-link:scale-x-0" />
                             </a>
                         </div>
                     </div>
@@ -225,66 +243,78 @@ export default function MainContact() {
                     <form className="w-full">
                         {/* Name + Email */}
                         <div className="grid grid-cols-2 gap-x-16">
-                            <div>
+                            <div className="relative group/form-field">
                                 <input
                                     type="text"
                                     placeholder="Name"
-                                    className="h-[34px] w-full border-b border-white bg-transparent text-[22px] font-normal tracking-[-0.035em] text-white outline-none placeholder:text-white"
+                                    className="h-[34px] w-full bg-transparent text-[22px] font-normal tracking-[-0.035em] text-white outline-none placeholder:text-white"
                                 />
+
+                                <span className="absolute bottom-0 left-0 h-px w-full origin-left scale-x-100 bg-white transition-transform duration-500 ease-in-out group-focus-within/form-field:scale-x-0" />
                             </div>
 
-                            <div>
+                            <div className="relative group/form-field">
                                 <input
                                     type="email"
                                     placeholder="Email"
-                                    className="h-[34px] w-full border-b border-white bg-transparent text-[22px] font-normal tracking-[-0.035em] text-white outline-none placeholder:text-white"
+                                    className="h-[34px] w-full bg-transparent text-[22px] font-normal tracking-[-0.035em] text-white outline-none placeholder:text-white"
                                 />
+
+                                <span className="absolute bottom-0 left-0 h-px w-full origin-left scale-x-100 bg-white transition-transform duration-500 ease-in-out group-focus-within/form-field:scale-x-0" />
                             </div>
                         </div>
 
                         {/* Phone + Company */}
                         <div className="mt-16 grid grid-cols-2 gap-x-16">
-                            <div>
+                            <div className="relative group/form-field">
                                 <input
                                     type="tel"
                                     placeholder="Phone"
-                                    className="h-[34px] w-full border-b border-white bg-transparent text-[22px] font-normal tracking-[-0.035em] text-white outline-none placeholder:text-white"
+                                    className="h-[34px] w-full bg-transparent text-[22px] font-normal tracking-[-0.035em] text-white outline-none placeholder:text-white"
                                 />
+
+                                <span className="absolute bottom-0 left-0 h-px w-full origin-left scale-x-100 bg-white transition-transform duration-500 ease-in-out group-focus-within/form-field:scale-x-0" />
                             </div>
 
-                            <div>
+                            <div className="relative group/form-field">
                                 <input
                                     type="text"
                                     placeholder="Company"
-                                    className="h-[34px] w-full border-b border-white bg-transparent text-[22px] font-normal tracking-[-0.035em] text-white outline-none placeholder:text-white"
+                                    className="h-[34px] w-full bg-transparent text-[22px] font-normal tracking-[-0.035em] text-white outline-none placeholder:text-white"
                                 />
+
+                                <span className="absolute bottom-0 left-0 h-px w-full origin-left scale-x-100 bg-white transition-transform duration-500 ease-in-out group-focus-within/form-field:scale-x-0" />
                             </div>
                         </div>
 
                         {/* Budget + Subject */}
                         <div className="mt-16 grid grid-cols-2 gap-x-16">
-                            <div>
+                            <div className="relative group/form-field">
                                 <input
                                     type="text"
                                     placeholder="Budget"
-                                    className="h-[34px] w-full border-b border-white bg-transparent text-[22px] font-normal tracking-[-0.035em] text-white outline-none placeholder:text-white"
+                                    className="h-[34px] w-full bg-transparent text-[22px] font-normal tracking-[-0.035em] text-white outline-none placeholder:text-white"
                                 />
+
+                                <span className="absolute bottom-0 left-0 h-px w-full origin-left scale-x-100 bg-white transition-transform duration-500 ease-in-out group-focus-within/form-field:scale-x-0" />
                             </div>
 
-                            <div>
+                            <div className="relative group/form-field">
                                 <input
                                     type="text"
                                     placeholder="Subject"
-                                    className="h-[34px] w-full border-b border-white bg-transparent text-[22px] font-normal tracking-[-0.035em] text-white outline-none placeholder:text-white"
+                                    className="h-[34px] w-full bg-transparent text-[22px] font-normal tracking-[-0.035em] text-white outline-none placeholder:text-white"
                                 />
+
+                                <span className="absolute bottom-0 left-0 h-px w-full origin-left scale-x-100 bg-white transition-transform duration-500 ease-in-out group-focus-within/form-field:scale-x-0" />
                             </div>
                         </div>
 
                         {/* Message */}
-                        <div className="mt-16">
-                            <textarea
-                                className="h-[100px] w-full resize-none border-b border-white bg-transparent p-0 text-[22px] font-normal text-white outline-none"
-                            />
+                        <div className="relative mt-16 group/form-field">
+                            <textarea className="h-[100px] w-full resize-none bg-transparent p-0 text-[22px] font-normal text-white outline-none" />
+
+                            <span className="absolute bottom-0 left-0 h-px w-full origin-left scale-x-100 bg-white transition-transform duration-500 ease-in-out group-focus-within/form-field:scale-x-0" />
                         </div>
 
                         {/* Submit Button */}

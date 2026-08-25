@@ -74,14 +74,14 @@ export default function ConvoCTA() {
                             ref={headingLine1Ref}
                             className="origin-top text-[80px] font-medium leading-[0.88] tracking-[-0.065em]"
                         >
-                            Let&apos;s Start With a
+                            Let&apos;s Start With
                         </div>
 
                         <div
                             ref={headingLine2Ref}
                             className="origin-top text-[80px] font-medium leading-[0.88] tracking-[-0.065em]"
                         >
-                            Conversation
+                            a Conversation
                         </div>
 
                         {/* Get In Touch */}

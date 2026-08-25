@@ -33,6 +33,10 @@ body {
   -ms-overflow-style: none;
 }
 
+.button Button{
+  cursor: pointer;
+}
+
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
