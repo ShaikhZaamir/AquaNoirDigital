@@ -2,10 +2,7 @@
 
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from "../HomeNav";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const socialLinks = [
     "Facebook",
@@ -16,100 +13,86 @@ const socialLinks = [
 export default function Hero() {
     const heroRef = useRef<HTMLElement>(null);
     const heroHeadingRef = useRef<HTMLHeadingElement>(null);
-    const growthRef = useRef<HTMLParagraphElement>(null);
-    const descriptionRef = useRef<HTMLParagraphElement>(null);
+    const descriptionRef = useRef<HTMLDivElement>(null);
     const socialRef = useRef<HTMLDivElement>(null);
     const ctaRef = useRef<HTMLDivElement>(null);
 
     const hoverImageRef = useRef<HTMLImageElement>(null);
-    const mouseMoveHandlerRef = useRef<((event: MouseEvent) => void) | null>(null);
+    const mouseMoveHandlerRef = useRef<((event: MouseEvent) => void) | null>(
+        null
+    );
 
     useLayoutEffect(() => {
         const hero = heroRef.current;
         const heading = heroHeadingRef.current;
-        const growth = growthRef.current;
         const description = descriptionRef.current;
         const social = socialRef.current;
         const cta = ctaRef.current;
 
-        if (!hero || !heading || !growth || !description || !social || !cta) {
+        if (!hero || !heading || !description || !social || !cta) {
             return;
         }
 
         const ctx = gsap.context(() => {
             const timeline = gsap.timeline();
 
-            // Center-out page reveal
-            timeline.fromTo(
-                hero,
-                { clipPath: "circle(0% at 50% 50%)" },
-                {
-                    clipPath: "circle(100% at 50% 50%)",
-                    duration: 5.0,
-                    ease: "power3.out",
-                }
-            );
-
-            // Hero heading entrance
-            timeline.fromTo(
-                heading,
-                { y: 25, opacity: 0 },
-                {
-                    y: 0,
-                    opacity: 1,
-                    duration: 1.4,
-                    ease: "power3.out",
-                },
-                0
-            );
-
-            // Growth text entrance
-            timeline.fromTo(
-                growth,
-                { y: 25, opacity: 0 },
-                {
-                    y: 0,
-                    opacity: 1,
-                    duration: 1.4,
-                    ease: "power3.out",
-                },
-                0
-            );
-
-            // Description entrance
-            timeline.fromTo(
-                description,
-                { y: 25, opacity: 0 },
-                {
-                    y: 0,
-                    opacity: 1,
-                    duration: 1.4,
-                    ease: "power3.out",
-                },
-                0
-            );
-
-            // Hide social & cta for scroll trigger
-            gsap.set([social, cta], {
-                y: 80,
-                opacity: 0,
-            });
-
-            ScrollTrigger.create({
-                trigger: hero,
-                start: "top top",
-                onUpdate: (self) => {
-                    if (self.direction === 1 && self.progress > 0) {
-                        gsap.to([social, cta], {
-                            y: 0,
-                            opacity: 1,
-                            duration: 1.1,
-                            ease: "power3.out",
-                            overwrite: true,
-                        });
-                    }
-                },
-            });
+            timeline
+                .fromTo(
+                    heading,
+                    {
+                        y: 80,
+                        opacity: 0,
+                    },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 1.2,
+                        ease: "power3.out",
+                    },
+                    0
+                )
+                .fromTo(
+                    description,
+                    {
+                        y: 80,
+                        opacity: 0,
+                    },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 1.2,
+                        ease: "power3.out",
+                    },
+                    0.15
+                )
+                .fromTo(
+                    social,
+                    {
+                        y: 80,
+                        opacity: 0,
+                    },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 1.2,
+                        ease: "power3.out",
+                    },
+                    0.3
+                )
+                .fromTo(
+                    cta,
+                    {
+                        y: 80,
+                        opacity: 0,
+                    },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 1.2,
+                        ease: "power3.out",
+                    },
+                    0.45
+                );
         }, hero);
 
         return () => ctx.revert();
@@ -232,9 +215,7 @@ export default function Hero() {
                                 >
                                     {social}
 
-                                    <span
-                                        className="absolute bottom-1 left-0 h-[2px] w-full origin-left scale-x-100 bg-white transition-transform duration-500 ease-in-out group-hover/social:scale-x-0"
-                                    />
+                                    <span className="absolute bottom-1 left-0 h-[2px] w-full origin-left scale-x-100 bg-white transition-transform duration-500 ease-in-out group-hover/social:scale-x-0" />
                                 </a>
                             ))}
                         </div>
@@ -245,9 +226,9 @@ export default function Hero() {
                         {/* Description */}
                         <div ref={descriptionRef}>
                             <p className="max-w-[900px] text-[20px] leading-[1.3]">
-                                Turning marketing spend into structured, measurable, compounding
-                                business outcomes, for growth-stage brands that are done with
-                                activity-first agencies.
+                                Turning marketing spend into structured, measurable,
+                                compounding business outcomes, for growth-stage brands
+                                that are done with activity-first agencies.
                             </p>
                         </div>
 
