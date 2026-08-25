@@ -1,12 +1,14 @@
 "use client";
 
 import { useRef } from "react";
+import Link from "next/link";
 import gsap from "gsap";
 
 const services = [
     {
         number: "(01)",
         title: "Digital Growth Strategy",
+        slug: "digital-growth-strategy",
         description:
             "We analyse your current digital ecosystem, identify opportunities for improvement, and build a structured growth roadmap aligned with your business objectives",
         image: "/AND0006-Digital-growth-strategy-270-x-210.jpg",
@@ -14,6 +16,7 @@ const services = [
     {
         number: "(02)",
         title: "Demand Generation & Performance Marketing",
+        slug: "demand-generation-performance-marketing",
         description:
             "We design acquisition systems that attract right audience and convert attention into meaningful enquiries and sales opportunities",
         image: "/AND0006-Demand-generation-performance-marketing-270-x-210.jpg",
@@ -21,6 +24,7 @@ const services = [
     {
         number: "(03)",
         title: "Search & Organic Visibility",
+        slug: "search-organic-visibility",
         description:
             "Customers search before they decide. We help your brand appear in those crucial moments through strong search strategy, technical SEO and high-value content.",
         image: "/AND0006-Search-and-organic-visibilty-270-x-210.jpg",
@@ -28,6 +32,7 @@ const services = [
     {
         number: "(04)",
         title: "Brand & Content Ecosystems",
+        slug: "brand-content-ecosystems",
         description:
             "Strong brands grow through consistent communication. We build content strategies and social media ecosystems that strengthen your brand authority and deepen customer engagement",
         image: "/AND0006-Brand-and-content-ecosystems-270-x-210.jpg",
@@ -35,6 +40,7 @@ const services = [
     {
         number: "(05)",
         title: "Digital Experience Platforms",
+        slug: "digital-experience-platforms",
         description:
             "Your website is one of your most important growth assets. We design digital platforms that are not only visually compelling but also structured to convert visitors into customers",
         image: "/AND0006-Digital-experience-platform-270-x-210.jpg",
@@ -42,7 +48,7 @@ const services = [
 ];
 
 export default function Services() {
-    const serviceRefs = useRef<HTMLDivElement[]>([]);
+    const serviceRefs = useRef<HTMLAnchorElement[]>([]);
 
     const handleMouseEnter = (index: number) => {
         serviceRefs.current.forEach((row, rowIndex) => {
@@ -161,8 +167,9 @@ export default function Services() {
                     {/* Services List */}
                     <div className="mt-24 flex flex-col">
                         {services.map((service, index) => (
-                            <div
+                            <Link
                                 key={`${service.number}-${index}`}
+                                href={`/services/${service.slug}`}
                                 ref={(el) => {
                                     if (el) {
                                         serviceRefs.current[index] = el;
@@ -206,7 +213,7 @@ export default function Services() {
                                         className="pointer-events-none h-[90px] w-full rounded-[16px] object-cover"
                                     />
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
