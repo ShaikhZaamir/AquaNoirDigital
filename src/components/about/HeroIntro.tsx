@@ -128,7 +128,7 @@ export default function HeroIntro() {
                 {/* LEFT SIDE */}
                 <div className="flex w-[63%] items-center">
                     <div className="flex flex-1 items-center pl-20">
-                        <h1 className="text-[70px] font-normal leading-[0.9] tracking-[-0.065em]">
+                        <h1 className="text-[70px] font-normal leading-[0.9] tracking-[-0.045em]">
                             <span className="block overflow-hidden">
                                 <span
                                     ref={headingLine1Ref}
