@@ -1,23 +1,12 @@
-export default function WhatsIncluded() {
-    const included = [
-        "Digital audit across all owned, earned and paid channels",
-        "Competitive intelligence and share-of-voice mapping",
-        "Customer journey and funnel gap analysis",
-        "Channel-level budget allocation framework",
-        "12-month growth roadmap with phased milestones",
-        "Internal capability gap assessment",
-        "Quarterly review cadence — 4 sessions included",
-        "Executive presentation deck and C-suite alignment workshop",
-    ];
+type WhatsIncludedProps = {
+    included: string[];
+    notIncluded: string[];
+};
 
-    const notIncluded = [
-        "Channel execution (covered under separate services)",
-        "Brand identity or creative strategy",
-        "Product or pricing strategy",
-        "Market entry feasibility studies",
-        "Technology implementation",
-    ];
-
+export default function WhatsIncluded({
+    included,
+    notIncluded,
+}: WhatsIncludedProps) {
     return (
         <section className="w-full bg-[#111111] px-10 py-25 text-white">
             {/* Top Divider */}

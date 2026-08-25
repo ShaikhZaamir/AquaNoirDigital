@@ -12,7 +12,7 @@ const navItems = [
 
 export default function Navbar() {
     return (
-        <header className="grid grid-cols-2 p-4 items-start">
+        <header className="grid grid-cols-2 items-start bg-[#111111] p-4">
             {/* Logo */}
             <div className="flex items-start pt-3">
                 <Link href="/" aria-label="Go to home page">

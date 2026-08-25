@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Link from "next/link";
 import gsap from "gsap";
 
 const services = [
@@ -10,6 +11,7 @@ const services = [
         description:
             "We analyse your current digital ecosystem, identify opportunities for improvement, and build a structured growth roadmap aligned with your business objectives",
         image: "/AND0006-Digital-growth-strategy-270-x-210.jpg",
+        href: "/services/digital-growth-strategy",
     },
     {
         number: "(02)",
@@ -17,6 +19,7 @@ const services = [
         description:
             "We design acquisition systems that attract right audience and convert attention into meaningful enquiries and sales opportunities",
         image: "/AND0006-Demand-generation-performance-marketing-270-x-210.jpg",
+        href: "/services/demand-generation-performance-marketing",
     },
     {
         number: "(03)",
@@ -24,6 +27,7 @@ const services = [
         description:
             "Customers search before they decide. We help your brand appear in those crucial moments through strong search strategy, technical SEO and high-value content.",
         image: "/AND0006-Search-and-organic-visibilty-270-x-210.jpg",
+        href: "/services/search-organic-visibility",
     },
     {
         number: "(04)",
@@ -31,6 +35,7 @@ const services = [
         description:
             "Strong brands grow through consistent communication. We build content strategies and social media ecosystems that strengthen your brand authority and deepen customer engagement",
         image: "/AND0006-Brand-and-content-ecosystems-270-x-210.jpg",
+        href: "/services/brand-content-ecosystems",
     },
     {
         number: "(05)",
@@ -38,11 +43,12 @@ const services = [
         description:
             "Your website is one of your most important growth assets. We design digital platforms that are not only visually compelling but also structured to convert visitors into customers",
         image: "/AND0006-Digital-experience-platform-270-x-210.jpg",
+        href: "/services/digital-experience-platforms",
     },
 ];
 
 export default function Capabilities() {
-    const serviceRefs = useRef<HTMLDivElement[]>([]);
+    const serviceRefs = useRef<HTMLAnchorElement[]>([]);
 
     const handleMouseEnter = (index: number) => {
         serviceRefs.current.forEach((row, rowIndex) => {
@@ -161,8 +167,10 @@ export default function Capabilities() {
                     {/* Services List */}
                     <div className="mt-24 flex flex-col">
                         {services.map((service, index) => (
-                            <div
+                            <Link
                                 key={`${service.number}-${index}`}
+                                href={service.href}
+                                prefetch={true}
                                 ref={(el) => {
                                     if (el) {
                                         serviceRefs.current[index] = el;
@@ -174,7 +182,7 @@ export default function Capabilities() {
                                 onMouseLeave={() =>
                                     handleMouseLeave(index)
                                 }
-                                className="flex h-[150px] min-h-[110px] w-full items-start overflow-hidden border-t border-white/10 pt-1"
+                                className="flex h-[150px] min-h-[110px] w-full cursor-pointer items-start overflow-hidden border-t border-white/10 pt-1 text-white"
                             >
                                 {/* Number */}
                                 <div className="w-[18%] shrink-0">
@@ -206,7 +214,7 @@ export default function Capabilities() {
                                         className="pointer-events-none h-[100px] w-full rounded-[16px] object-cover"
                                     />
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
