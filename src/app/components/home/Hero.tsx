@@ -187,7 +187,7 @@ export default function Hero() {
         <>
             <section
                 ref={heroRef}
-                className="min-h-screen bg-[#111111] text-white"
+                className="min-h-screen bg-[#111111] px-3.5 text-white"
             >
                 <Navbar />
 

@@ -18,7 +18,7 @@ export default function Navbar() {
                 <img
                     src="\logo_Light.png"
                     alt="Aquanoir Logo"
-                    className="w-[120px] object-contain sm:w-[135px]"
+                    className="w-[120px] h-auto object-contain sm:w-[135px]"
                 />
             </div>
 

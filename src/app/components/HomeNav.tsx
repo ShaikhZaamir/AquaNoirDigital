@@ -18,13 +18,13 @@ export default function HomeNav() {
                 <img
                     src="\logo_Light.png"
                     alt="Aquanoir Logo"
-                    className="w-[120px] object-contain sm:w-[135px]"
+                    className="w-[120px] h-auto object-contain sm:w-[135px]"
                 />
             </div>
 
             {/* Nav Text */}
             <div className="flex justify-center pt-2">
-                <p className="w-full text-center text-[18apx] leading-[1.15]">
+                <p className="w-full text-center text-[18px] leading-[1.15]">
                     Strategy-Led Digital Growth Partner
                     <br />
                     Part of the AURAA Ecosystem

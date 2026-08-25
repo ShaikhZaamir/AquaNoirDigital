@@ -18,13 +18,11 @@ export default function AboutPage() {
             className="min-h-screen bg-[#111111] text-white"
         >
             <Navbar />
+            
             <Hero />
             <HeroIntro />
             <AboutIntro />
-
-            {/* Temp Comment */}
-            {/* < YoutubeVideo /> */}
-
+            < YoutubeVideo />
             <div className="h-10"> </div>
             <WhoWeAre />
             <StatsStrip />
