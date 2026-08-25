@@ -41,11 +41,7 @@ export default function HeroIntro() {
         }
 
         const ctx = gsap.context(() => {
-            /* =====================================================
-               LEFT HEADING
-               SEQUENTIAL LEFT-TO-RIGHT REVEAL
-            ===================================================== */
-
+            //    LEFT HEADING
             gsap.set([line1, line2, line3, shape], {
                 clipPath: "inset(0 100% 0 0)",
                 opacity: 1,
@@ -59,32 +55,30 @@ export default function HeroIntro() {
                 },
             });
 
+            // LEFT HEADING
             headingTimeline
                 .to(line1, {
                     clipPath: "inset(0 0% 0 0)",
-                    duration: 1.5,
+                    duration: 1,
                     ease: "power3.out",
                 })
                 .to(line2, {
                     clipPath: "inset(0 0% 0 0)",
-                    duration: 1.3,
+                    duration: 0.9,
                     ease: "power3.out",
-                }, "+=0.35")
+                }, "+=0.25")
                 .to(shape, {
                     clipPath: "inset(0 0% 0 0)",
-                    duration: 0.8,
+                    duration: 0.6,
                     ease: "power3.out",
-                }, "+=0.35")
+                }, "+=0.25")
                 .to(line3, {
                     clipPath: "inset(0 0% 0 0)",
-                    duration: 1.5,
+                    duration: 1,
                     ease: "power3.out",
-                }, "+=0.35");
+                }, "+=0.25");
 
-            /* =====================================================
-               RIGHT TOP
-               Separate float-up animation
-            ===================================================== */
+            //    RIGHT TOP
 
             gsap.set(topContent, {
                 y: 70,
@@ -103,11 +97,7 @@ export default function HeroIntro() {
                 },
             });
 
-            /* =====================================================
-               RIGHT BOTTOM
-               Separate float-up animation
-            ===================================================== */
-
+            //    RIGHT BOTTOM
             gsap.set(bottomContent, {
                 y: 70,
                 opacity: 0,

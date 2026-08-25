@@ -1,29 +1,35 @@
 "use client";
 
 import { useLayoutEffect, useRef } from "react";
+import { Inter } from "next/font/google";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const inter = Inter({
+    subsets: ["latin"],
+    weight: ["400"],
+});
+
 const stats = [
     {
-        label: "35+ Google reviews",
-        value: 4.9,
-        suffix: "",
-        decimals: 1,
+        label: "Industries we serve",
+        value: 12,
+        suffix: "+",
+        decimals: 0,
     },
     {
-        label: "Clients world-wide",
-        value: 1.8,
+        label: "Marketing ROI",
+        value: 3.7,
         suffix: "K",
         decimals: 1,
     },
     {
-        label: "Completed projects",
-        value: 1.7,
-        suffix: "K",
-        decimals: 1,
+        label: "Reduction in CPL",
+        value: 40,
+        suffix: "%",
+        decimals: 0,
     },
     {
         label: "Client satisfaction",
@@ -50,9 +56,7 @@ export default function StatsStrip() {
                 cards.querySelectorAll<HTMLElement>(".who-we-are-card")
             );
 
-            // ---------------------------------------------------------
             // Individual card animations + number counters
-            // ---------------------------------------------------------
             cardElements.forEach((card, index) => {
                 const valueElement =
                     card.querySelector<HTMLElement>(".stat-value");
@@ -108,22 +112,22 @@ export default function StatsStrip() {
     return (
         <section
             ref={sectionRef}
-            className="border-t border-white/10 bg-[#111111] px-4 pb-32 pt-16 text-white"
+            className="border-t border-white/10 bg-[#111111] px-4 pb-32 pt-24 text-white"
         >
             <div
                 ref={cardsRef}
-                className="flex w-full items-stretch gap-6"
+                className="flex w-full gap-6"
             >
                 {stats.map((stat) => (
                     <div
                         key={stat.label}
-                        className="who-we-are-card flex min-h-[188px] flex-1 flex-col justify-between rounded-[22px] bg-[#1d1d1d] px-8 py-8 sm:min-h-[190px] sm:px-10 sm:py-9"
+                        className="who-we-are-card flex flex-1 flex-col justify-between rounded-[22px] bg-[#1d1d1d] px-10 py-8 gap-6"
                     >
                         <p className="text-[18px] leading-[1.2] text-[#9b9b9b]">
                             {stat.label}
                         </p>
 
-                        <p className="stat-value text-[56px] font-normal leading-none tracking-[-0.055em] sm:text-[58px] lg:text-[60px]">
+                        <p className={`stat-value ${inter.className} text-[50px] font-normal leading-none tracking-[-0.055em]`}>
                             0
                         </p>
                     </div>
