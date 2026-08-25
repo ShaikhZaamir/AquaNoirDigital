@@ -1,5 +1,11 @@
 "use client";
 
+import { useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const awards = [
     {
         title: "Pitch Finovate",
@@ -16,12 +22,54 @@ const awards = [
 ];
 
 export default function Awards() {
+    const sectionRef = useRef<HTMLElement>(null);
+
+    useLayoutEffect(() => {
+        const section = sectionRef.current;
+
+        if (!section) return;
+
+        const ctx = gsap.context(() => {
+            const textElements = section.querySelectorAll(
+                "[data-award-text]"
+            );
+
+            gsap.fromTo(
+                textElements,
+                {
+                    y: 50,
+                    opacity: 0,
+                },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    stagger: 0.15,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        once: true,
+                    },
+                }
+            );
+        }, section);
+
+        return () => ctx.revert();
+    }, []);
+
     return (
-        <section className="w-full bg-[#f6f0ec] px-5 pt-12 pb-36 text-[#111111]">
+        <section
+            ref={sectionRef}
+            className="w-full bg-[#f6f0ec] px-5 pt-12 pb-36 text-[#111111]"
+        >
             <div className="flex w-full items-center">
                 {/* Left */}
                 <div className="w-1/2 shrink-0">
-                    <h2 className="text-[30px] font-medium tracking-[-0.035em]">
+                    <h2
+                        data-award-text
+                        className="text-[30px] font-medium tracking-[-0.025em]"
+                    >
                         RECOGNISED BY THE INDUSTRIES WE SERVE.
                     </h2>
                 </div>
@@ -31,9 +79,10 @@ export default function Awards() {
                     {awards.map((award) => (
                         <div
                             key={award.title}
+                            data-award-text
                             className="flex items-baseline whitespace-nowrap"
                         >
-                            <span className="text-[50px] font-normal leading-[1] tracking-[-0.055em]">
+                            <span className="text-[50px] font-normal leading-[1.4] tracking-[-0.015em]">
                                 {award.title}
                             </span>
 

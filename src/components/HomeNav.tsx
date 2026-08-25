@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 const navItems = [
@@ -12,13 +13,15 @@ const navItems = [
 
 export default function HomeNav() {
     return (
-        <header className="grid grid-cols-3 p-4 items-start">
+        <header className="grid grid-cols-3 items-start p-4">
             {/* Logo */}
             <div className="flex items-start pt-3">
                 <Link href="/" aria-label="Go to home page">
-                    <img
+                    <Image
                         src="/logo_Light.png"
                         alt="Aquanoir Logo"
+                        width={135}
+                        height={43}
                         className="h-auto w-[120px] object-contain sm:w-[135px]"
                     />
                 </Link>

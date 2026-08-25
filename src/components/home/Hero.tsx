@@ -187,7 +187,7 @@ export default function Hero() {
         <>
             <section
                 ref={heroRef}
-                className="min-h-screen bg-[#111111] text-white"
+                className="pb-34 bg-[#111111] text-white"
             >
                 <Navbar />
 
@@ -294,7 +294,7 @@ export default function Hero() {
                             {/* Results */}
                             <a
                                 href="#"
-                                className="group/cta inline-flex items-center pl-12"
+                                className="group/cta inline-flex items-center pl-2"
                             >
                                 <span className="relative z-10 origin-left rounded-full border-2 border-white px-8 py-1.5 text-[18px] font-medium transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/cta:-rotate-[10deg]">
                                     See Our Results

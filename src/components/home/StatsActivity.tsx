@@ -52,10 +52,7 @@ export default function StatsActivity() {
         if (!section || !activity) return;
 
         const ctx = gsap.context(() => {
-            /* =====================================================
-               LEFT ACTIVITY PIN
-            ===================================================== */
-
+            //    LEFT ACTIVITY PIN
             const lastStat = statRefs.current[statRefs.current.length - 1];
 
             if (lastStat) {
@@ -70,10 +67,7 @@ export default function StatsActivity() {
                 });
             }
 
-            /* =====================================================
-               STAT COLOR ACTIVATION
-            ===================================================== */
-
+            //    STAT COLOR ACTIVATION
             statRefs.current.forEach((stat) => {
                 if (!stat) return;
 
@@ -120,32 +114,23 @@ export default function StatsActivity() {
             className="w-full bg-[#111111] text-white"
         >
             <div className="flex w-full items-start">
-
-                {/* =====================================================
-                    LEFT — PERFECT ACTIVITY
-                ===================================================== */}
-
+                {/* LEFT  */}
                 <div className="relative w-[45%] shrink-0 border-r border-white/10">
                     <div
                         ref={activityRef}
-                        className="flex h-screen w-full items-center px-5 sm:px-8 lg:px-5"
+                        className="flex h-screen w-full items-center px-5"
                     >
-                        <h2 className="absolute w-[70%] text-[80px] font-medium leading-[0.88] tracking-[-0.065em]">
+                        <h2 className="absolute w-[70%] text-[80px] font-medium leading-[0.98] tracking-[-0.055em]">
                             A Strategic Digital Growth Partner Within the AURAA Ecosystem
                         </h2>
                     </div>
                 </div>
 
-                {/* =====================================================
-                    RIGHT — TWO SCROLLING LANES
-                ===================================================== */}
+                {/* RIGHT — TWO SCROLLING LANES */}
 
                 <div className="flex w-[55%] items-start">
 
-                    {/* =================================================
-                        LEFT LANE
-                    ================================================= */}
-
+                    {/* LEFT LANE */}
                     <div className="flex w-1/2 flex-col border-l border-white/10">
                         <div className="ml-[38px] flex flex-col border-l border-white/10">
                             {leftStats.map((stat, index) => (
@@ -161,21 +146,21 @@ export default function StatsActivity() {
                                     <div className="flex flex-col">
                                         <span
                                             data-stat-top
-                                            className="text-[18px] leading-[1.2] tracking-[-0.025em] text-[#3d3d3d]"
+                                            className="text-[22px] leading-[1.2] tracking-[-0.025em] text-[#3d3d3d]"
                                         >
                                             {stat.top}
                                         </span>
 
                                         <span
                                             data-stat-number
-                                            className="mt-8 text-[clamp(5rem,8vw,8rem)] font-normal leading-[0.82] tracking-[-0.075em] text-[#3d3d3d]"
+                                            className="mt-8 text-[100px] font-normal leading-[0.82] tracking-[-0.075em] text-[#3d3d3d]"
                                         >
                                             {stat.number}
                                         </span>
 
                                         <p
                                             data-stat-description
-                                            className="mt-8 max-w-[390px] text-[clamp(1.15rem,1.6vw,1.5rem)] leading-[1.25] tracking-[-0.025em] text-[#3d3d3d]"
+                                            className="mt-8 max-w-[390px] text-[22px] leading-[1.25] tracking-[-0.025em] text-[#3d3d3d]"
                                         >
                                             {stat.description}
                                         </p>

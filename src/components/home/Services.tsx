@@ -1,8 +1,11 @@
 "use client";
 
-import { useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import Link from "next/link";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const services = [
     {
@@ -48,7 +51,40 @@ const services = [
 ];
 
 export default function Services() {
+    const sectionRef = useRef<HTMLElement>(null);
     const serviceRefs = useRef<HTMLAnchorElement[]>([]);
+    const contentRef = useRef<HTMLDivElement>(null);
+
+    useLayoutEffect(() => {
+        const section = sectionRef.current;
+        const content = contentRef.current;
+
+        if (!section || !content) return;
+
+        const ctx = gsap.context(() => {
+            /* Viewport entrance animation */
+            gsap.fromTo(
+                content,
+                {
+                    y: 80,
+                    opacity: 0,
+                },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1.2,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        once: true,
+                    },
+                }
+            );
+        }, section);
+
+        return () => ctx.revert();
+    }, []);
 
     const handleMouseEnter = (index: number) => {
         serviceRefs.current.forEach((row, rowIndex) => {
@@ -57,13 +93,15 @@ export default function Services() {
             const description = row.querySelector(
                 "[data-service-description]"
             );
-            const image = row.querySelector("[data-service-image]");
+            const imageWrapper = row.querySelector(
+                "[data-service-image-wrapper]"
+            );
 
-            if (!description || !image) return;
+            if (!description || !imageWrapper) return;
 
             if (rowIndex === index) {
                 gsap.to(row, {
-                    height: 180,
+                    height: 200,
                     duration: 0.7,
                     ease: "power3.out",
                     overwrite: true,
@@ -78,9 +116,9 @@ export default function Services() {
                     overwrite: true,
                 });
 
-                gsap.to(image, {
-                    scale: 1.5,
-                    transformOrigin: "right top",
+                gsap.to(imageWrapper, {
+                    width: 295,
+                    height: 145,
                     duration: 0.7,
                     ease: "power3.out",
                     overwrite: true,
@@ -101,9 +139,9 @@ export default function Services() {
                     overwrite: true,
                 });
 
-                gsap.to(image, {
-                    scale: 1,
-                    transformOrigin: "right top",
+                gsap.to(imageWrapper, {
+                    width: 165,
+                    height: 81,
                     duration: 0.6,
                     ease: "power3.inOut",
                     overwrite: true,
@@ -120,9 +158,11 @@ export default function Services() {
         const description = row.querySelector(
             "[data-service-description]"
         );
-        const image = row.querySelector("[data-service-image]");
+        const imageWrapper = row.querySelector(
+            "[data-service-image-wrapper]"
+        );
 
-        if (!description || !image) return;
+        if (!description || !imageWrapper) return;
 
         gsap.to(row, {
             height: 100,
@@ -139,9 +179,9 @@ export default function Services() {
             overwrite: true,
         });
 
-        gsap.to(image, {
-            scale: 1,
-            transformOrigin: "right top",
+        gsap.to(imageWrapper, {
+            width: 165,
+            height: 81,
             duration: 0.7,
             ease: "power3.inOut",
             overwrite: true,
@@ -149,18 +189,24 @@ export default function Services() {
     };
 
     return (
-        <section className="w-full bg-[#111111] px-5 pb-20 text-white">
-            <div className="flex w-full items-start border-t border-white/10 pt-14">
+        <section
+            ref={sectionRef}
+            className="w-full bg-[#111111] px-5 pb-40 text-white"
+        >
+            <div
+                ref={contentRef}
+                className="flex w-full items-start border-t border-white/10 pt-12"
+            >
                 {/* Left Label */}
                 <div className="w-[38%] shrink-0">
-                    <h2 className="text-[30px] font-normal leading-none tracking-[-0.045em]">
+                    <h2 className="text-[30px] font-medium leading-none tracking-[-0.045em]">
                         OUR SERVICES
                     </h2>
                 </div>
 
                 {/* Right Content */}
                 <div className="w-[62%]">
-                    <h3 className="text-[80px] font-normal leading-[0.9] tracking-[-0.085em]">
+                    <h3 className="text-[30px] uppercase font-medium leading-[0.9] tracking-[-0.025em]">
                         Our services that power your business growth
                     </h3>
 
@@ -181,36 +227,42 @@ export default function Services() {
                                 onMouseLeave={() =>
                                     handleMouseLeave(index)
                                 }
-                                className="flex h-[100px] min-h-[100px] w-full items-start overflow-hidden border-t border-white/10 pt-1"
+                                className="flex h-[100px] min-h-[100px] w-full items-start overflow-hidden border-t border-white/10 pt-2"
                             >
                                 {/* Number */}
-                                <div className="w-[18%] shrink-0">
-                                    <span className="text-[18px] leading-none text-white/60">
+                                <div className="w-[15%] shrink-0">
+                                    <span className="text-[16px] leading-none text-white/60">
                                         {service.number}
                                     </span>
                                 </div>
 
                                 {/* Title + Description */}
-                                <div className="w-[62%] pr-6">
+                                <div className="w-[64%]">
                                     <h4 className="max-w-[620px] text-[32px] font-normal leading-[1.05] tracking-[-0.045em]">
                                         {service.title}
                                     </h4>
 
                                     <p
                                         data-service-description
-                                        className="mt-3 max-w-100 translate-y-5 text-[20px] leading-[1.2] tracking-[-0.025em] opacity-0"
+                                        className="mt-3 max-w-100 translate-y-5 text-[20px] text-[#999999] leading-[1.2] tracking-[-0.005em] opacity-0"
                                     >
                                         {service.description}
                                     </p>
                                 </div>
 
                                 {/* Image */}
-                                <div className="ml-auto w-[184px] shrink-0 overflow-visible rounded-[16px]">
+                                <div
+                                    data-service-image-wrapper
+                                    style={{
+                                        width: 165,
+                                        height: 81,
+                                    }}
+                                    className="ml-auto shrink-0 overflow-visible rounded-[16px]"
+                                >
                                     <img
-                                        data-service-image
                                         src={service.image}
                                         alt=""
-                                        className="pointer-events-none h-[90px] w-full rounded-[16px] object-cover"
+                                        className="pointer-events-none h-full w-full rounded-[16px] object-cover"
                                     />
                                 </div>
                             </Link>

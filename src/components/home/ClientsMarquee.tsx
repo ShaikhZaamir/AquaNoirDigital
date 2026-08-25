@@ -25,7 +25,7 @@ export default function ClientsMarquee({
 
             gsap.to(track, {
                 x: -totalWidth,
-                duration: 30,
+                duration: 25,
                 ease: "none",
                 repeat: -1,
             });

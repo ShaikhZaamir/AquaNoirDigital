@@ -77,7 +77,7 @@ export default function Clients() {
             <section className="w-full overflow-hidden bg-[#111111] px-5 text-white">
                 <div className="flex h-[180px] w-full border-t border-b border-white/10">
                     {/* Play Button Area */}
-                    <div className="flex w-[220px] shrink-0 items-center border-r border-white/10">
+                    <div className="flex pr-7 shrink-0 items-center border-r border-white/10">
                         <div className="relative flex items-center">
                             {/* Image behind play button */}
                             <img

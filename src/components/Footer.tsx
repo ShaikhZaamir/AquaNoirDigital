@@ -99,7 +99,7 @@ export default function Footer() {
 
             {/* Copyright */}
             <div className="border-t border-white/10 px-5 pt-11 pb-7 text-center">
-                <p className="text-[24px] leading-none tracking-[-0.035em]">
+                <p className="text-[24px] leading-none tracking-[-0.015em]">
                     © 2026 Aqua Noir Digital. All right reserved
                 </p>
             </div>

@@ -38,13 +38,6 @@ export default function Approach() {
 
     const headingLine1Ref = useRef<HTMLDivElement>(null);
     const headingLine2Ref = useRef<HTMLDivElement>(null);
-    const headingLine3Ref = useRef<HTMLDivElement>(null);
-    const headingLine4Ref = useRef<HTMLDivElement>(null);
-    const headingLine5Ref = useRef<HTMLDivElement>(null);
-    const headingLine6Ref = useRef<HTMLDivElement>(null);
-    const headingLine7Ref = useRef<HTMLDivElement>(null);
-    const headingLine8Ref = useRef<HTMLDivElement>(null);
-    const headingLine9Ref = useRef<HTMLDivElement>(null);
 
     const cardRefs = useRef<HTMLElement[]>([]);
 
@@ -53,26 +46,8 @@ export default function Approach() {
 
         const line1 = headingLine1Ref.current;
         const line2 = headingLine2Ref.current;
-        const line3 = headingLine3Ref.current;
-        const line4 = headingLine4Ref.current;
-        const line5 = headingLine5Ref.current;
-        const line6 = headingLine6Ref.current;
-        const line7 = headingLine7Ref.current;
-        const line8 = headingLine8Ref.current;
-        const line9 = headingLine9Ref.current;
 
-        if (
-            !section ||
-            !line1 ||
-            !line2 ||
-            !line3 ||
-            !line4 ||
-            !line5 ||
-            !line6 ||
-            !line7 ||
-            !line8 ||
-            !line9
-        ) {
+        if (!section || !line1 || !line2) {
             return;
         }
 
@@ -84,13 +59,6 @@ export default function Approach() {
             const headingLines = [
                 line1,
                 line2,
-                line3,
-                line4,
-                line5,
-                line6,
-                line7,
-                line8,
-                line9,
             ];
 
             gsap.set(headingLines, {
@@ -158,7 +126,7 @@ export default function Approach() {
             <div className="flex w-full items-end">
                 {/* Left — 35% */}
                 <div className="w-[35%]">
-                    <p className="text-[30px] font-medium leading-[1.15] tracking-[-0.04em]">
+                    <p className="text-[30px] font-medium leading-[1.15] tracking-[-0.025em]">
                         OUR APPROACH
                     </p>
                 </div>
@@ -169,73 +137,17 @@ export default function Approach() {
                         {/* Line 1 */}
                         <div
                             ref={headingLine1Ref}
-                            className="origin-top text-[80px] font-medium leading-[0.88] tracking-[-0.065em]"
+                            className="origin-top whitespace-nowrap text-[30px] font-medium leading-[0.88] tracking-[-0.055em]"
                         >
-                            We build connected
+                            We build connected digital growth systems that bring together strategy,
                         </div>
 
                         {/* Line 2 */}
                         <div
                             ref={headingLine2Ref}
-                            className="origin-top text-[80px] font-medium leading-[0.88] tracking-[-0.065em]"
+                            className="origin-top whitespace-nowrap text-[30px] font-medium leading-[0.88] tracking-[-0.055em]"
                         >
-                            digital growth
-                        </div>
-
-                        {/* Line 3 */}
-                        <div
-                            ref={headingLine3Ref}
-                            className="origin-top text-[80px] font-medium leading-[0.88] tracking-[-0.065em]"
-                        >
-                            systems that bring
-                        </div>
-
-                        {/* Line 4 */}
-                        <div
-                            ref={headingLine4Ref}
-                            className="origin-top text-[80px] font-medium leading-[0.88] tracking-[-0.065em]"
-                        >
-                            together strategy,
-                        </div>
-
-                        {/* Line 5 */}
-                        <div
-                            ref={headingLine5Ref}
-                            className="origin-top text-[80px] font-medium leading-[0.88] tracking-[-0.065em]"
-                        >
-                            brand
-                        </div>
-
-                        {/* Line 6 */}
-                        <div
-                            ref={headingLine6Ref}
-                            className="origin-top text-[80px] font-medium leading-[0.88] tracking-[-0.065em]"
-                        >
-                            communication,
-                        </div>
-
-                        {/* Line 7 */}
-                        <div
-                            ref={headingLine7Ref}
-                            className="origin-top text-[80px] font-medium leading-[0.88] tracking-[-0.065em]"
-                        >
-                            performance
-                        </div>
-
-                        {/* Line 8 */}
-                        <div
-                            ref={headingLine8Ref}
-                            className="origin-top text-[80px] font-medium leading-[0.88] tracking-[-0.065em]"
-                        >
-                            marketing, and digital
-                        </div>
-
-                        {/* Line 9 */}
-                        <div
-                            ref={headingLine9Ref}
-                            className="origin-top text-[80px] font-medium leading-[0.88] tracking-[-0.065em]"
-                        >
-                            infrastructure.
+                            brand communication, performance marketing, and digital infrastructure.
                         </div>
                     </div>
                 </div>
@@ -251,7 +163,7 @@ export default function Approach() {
                 </div>
 
                 {/* Right — 65% */}
-                <div className="mt-20 w-[65%]">
+                <div className="w-[65%]">
                     {approaches.map((approach, index) => (
                         <article
                             key={approach.number}

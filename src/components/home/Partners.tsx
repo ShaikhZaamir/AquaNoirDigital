@@ -337,16 +337,16 @@ export default function FallingText() {
     }, [hasFallen]);
 
     return (
-        <section className="relative flex h-[700px] min-h-[500px] w-full select-none flex-col overflow-hidden bg-[#111111] px-4 mt-18 mb-40 pb-6 text-white">
+        <section className="relative flex h-[600px] min-h-[450px] w-full select-none flex-col overflow-hidden bg-[#111111] px-4 mt-18 mb-40 pb-6 text-white">
             {/* Header */}
             <div className="w-full shrink-0">
-                <h2 className="text-[80px] font-medium tracking-tight text-white">
+                <h2 className="text-[30px] uppercase font-medium tracking-tight text-white">
                     Our Partners
                 </h2>
             </div>
 
             {/* Description */}
-            <div className="pt-20 flex w-full shrink-0 justify-center">
+            <div className="pt-10 flex w-full shrink-0 justify-center">
                 <p className="max-w-[500px] text-center text-[22px] font-normal leading-[1.4] text-[#A1A1A1]">
                     Collaborating with trusted partners to deliver stronger digital outcomes
                 </p>
@@ -355,7 +355,7 @@ export default function FallingText() {
             {/* Falling Physics Area */}
             <div
                 ref={containerRef}
-                className="relative mt-4 min-h-0 flex-1 w-full overflow-hidden"
+                className="relative min-h-0 flex-1 w-full overflow-hidden"
             >
                 {/* Canvas Container */}
                 <div
