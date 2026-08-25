@@ -25,10 +25,10 @@ export default function ParallaxImage() {
                 gsap.fromTo(
                     image,
                     {
-                        yPercent: -8,
+                        yPercent: -15,
                     },
                     {
-                        yPercent: 8,
+                        yPercent: 15,
                         ease: "none",
                         scrollTrigger: {
                             trigger: section,
