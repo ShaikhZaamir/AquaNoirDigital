@@ -52,10 +52,8 @@ export default function Approach() {
         }
 
         const ctx = gsap.context(() => {
-            /* ========================================
-               HEADING HANGING ANIMATION
-            ======================================== */
 
+            // HEADING HANGING ANIMATION
             const headingLines = [
                 line1,
                 line2,
@@ -88,10 +86,7 @@ export default function Approach() {
                 },
             });
 
-            /* ========================================
-               CARD SCROLL-LINKED ANIMATION
-            ======================================== */
-
+            // CARD SCROLL-LINKED ANIMATION
             cardRefs.current.forEach((card) => {
                 if (!card) return;
 

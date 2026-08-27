@@ -111,16 +111,11 @@ export default function FallingText() {
         const wallThickness = 100;
         const floorHeight = 120;
 
-        /*
-         * Decorative floor:
-         * 8 lines + gaps + bottom padding.
-         */
+        //  Decorative floor: 8 lines + gaps + bottom padding
         const floorVisualHeight = 48;
         const floorTopY = height - floorVisualHeight;
 
-        /*
-         * FLOOR
-         */
+        // FLOOR
         const floor = Bodies.rectangle(
             width / 2,
             floorTopY + floorHeight / 2,
@@ -129,9 +124,7 @@ export default function FallingText() {
             wallOptions
         );
 
-        /*
-         * LEFT WALL
-         */
+        // LEFT WALL
         const leftWall = Bodies.rectangle(
             -wallThickness / 2,
             height / 2,
@@ -140,9 +133,7 @@ export default function FallingText() {
             wallOptions
         );
 
-        /*
-         * RIGHT WALL
-         */
+        // RIGHT WALL
         const rightWall = Bodies.rectangle(
             width + wallThickness / 2,
             height / 2,
@@ -151,10 +142,7 @@ export default function FallingText() {
             wallOptions
         );
 
-        /*
-         * TOP WALL
-         * Creates a fully closed physics box.
-         */
+        // TOP WALL: Creates a fully closed physics box.
         const ceiling = Bodies.rectangle(
             width / 2,
             -wallThickness / 2,
@@ -182,9 +170,7 @@ export default function FallingText() {
 
                 const row = Math.floor(i / columns);
 
-                /*
-                 * All capsules now start INSIDE the closed box.
-                 */
+                // All capsules now start INSIDE the closed box.
                 const startY =
                     40 +
                     row * 80 +
@@ -250,10 +236,7 @@ export default function FallingText() {
 
         render.mouse = mouse;
 
-        /*
-         * Automatically drop the capsule if the cursor
-         * leaves the physics container.
-         */
+        // Automatically drop the capsule if the cursor leaves the physics container
         const handleMouseMove = (
             event: globalThis.MouseEvent
         ) => {
@@ -267,9 +250,9 @@ export default function FallingText() {
                 event.clientY > rect.bottom;
 
             if (isOutside && mouseConstraint.body) {
-    mouseConstraint.mouse.button = -1;
-    mouseConstraint.constraint.bodyB = null;
-}
+                mouseConstraint.mouse.button = -1;
+                mouseConstraint.constraint.bodyB = null;
+            }
         };
 
         window.addEventListener(

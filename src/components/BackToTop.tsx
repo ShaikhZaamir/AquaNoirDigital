@@ -33,34 +33,10 @@ export default function BackToTop() {
             type="button"
             aria-label="Back to top"
             onClick={handleClick}
-            className={`
-                fixed
-                bottom-5
-                right-5
-                z-[9999]
-                flex
-                h-[45px]
-                w-[45px]
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-white/35
-                bg-white
-                backdrop-blur-2xl
-                backdrop-saturate-150
-                shadow-[inset_0_1px_1px_rgba(255,255,255,0.35),0_8px_30px_rgba(0,0,0,0.18)]
-                transition-all
-                duration-500
-                ease-out
-                hover:scale-105
-                hover:bg-white
-                active:scale-95
-                ${visible
-                    ? "translate-y-0 opacity-100"
-                    : "pointer-events-none translate-y-4 opacity-0"
-                }
-            `}
+            className={`fixed bottom-5 right-5 z-[9999] flex h-[45px] w-[45px] items-center justify-center rounded-full border border-white/35 bg-white backdrop-blur-2xl backdrop-saturate-150 shadow-[inset_0_1px_1px_rgba(255,255,255,0.35),0_8px_30px_rgba(0,0,0,0.18)] transition-all duration-500 ease-out hover:scale-105 hover:bg-white active:scale-95 ${visible
+                ? "translate-y-0 opacity-100"
+                : "pointer-events-none translate-y-4 opacity-0"
+                }`}
             style={{
                 WebkitBackdropFilter:
                     "blur(24px) saturate(150%)",

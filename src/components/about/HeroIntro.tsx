@@ -41,7 +41,7 @@ export default function HeroIntro() {
         }
 
         const ctx = gsap.context(() => {
-            //    LEFT HEADING
+            // LEFT HEADING
             gsap.set([line1, line2, line3, shape], {
                 clipPath: "inset(0 100% 0 0)",
                 opacity: 1,

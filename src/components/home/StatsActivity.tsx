@@ -127,7 +127,6 @@ export default function StatsActivity() {
                 </div>
 
                 {/* RIGHT — TWO SCROLLING LANES */}
-
                 <div className="flex w-[55%] items-start">
 
                     {/* LEFT LANE */}
@@ -170,10 +169,7 @@ export default function StatsActivity() {
                         </div>
                     </div>
 
-                    {/* =================================================
-                        RIGHT LANE
-                    ================================================= */}
-
+                    {/* RIGHT LANE */}
                     <div className="flex w-1/2 flex-col border-l border-white/10 pt-[50vh]">
                         <div className="ml-[38px] flex flex-col border-l border-white/10">
                             {rightStats.map((stat, index) => (
@@ -217,4 +213,3 @@ export default function StatsActivity() {
         </section>
     );
 }
-

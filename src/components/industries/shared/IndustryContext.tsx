@@ -64,6 +64,7 @@ export default function IndustryContext({
             className="bg-[#111111] px-8 py-24 text-white"
         >
             <div className="flex w-full items-start">
+                
                 {/* Left Content */}
                 <div className="w-[40%] shrink-0">
                     <p className="text-[30px] font-normal leading-[1.15] tracking-[-0.04em]">
